@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  vopr: MyText
+  tur: 1
+  id_uchast: 1
+  categor: MyString
+
+two:
+  vopr: MyText
+  tur: 1
+  id_uchast: 1
+  categor: MyString

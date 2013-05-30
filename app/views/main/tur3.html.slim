@@ -1,0 +1,142 @@
+-i=0
+-j=0
+-k=0
+javascript:
+  var vopr1=[], vopr2=[], vopr3=[], fio1=[], fio2=[], fio3=[], i, j, k;
+- @vopros1.each do |voprosy|
+    -i=i.next
+    javascript:
+      vopr1[#{i}]= "#{voprosy.vopr}";
+      fio1[#{i}]= "#{voprosy.categor}";
+      i=0;
+
+- @vopros2.each do |voprosy|
+    -j=j.next
+    javascript:
+      vopr2[#{j}]= "#{voprosy.vopr}";
+      fio2[#{j}]= "#{voprosy.categor}";
+      j=0;
+
+- @vopros3.each do |voprosy|
+    -k=k.next
+    javascript:
+      vopr3[#{k}]= "#{voprosy.vopr}";
+      fio3[#{k}]= "#{voprosy.categor}";
+      k=0;
+
+div align="center"
+    a href="#" id="show" Показать
+    /
+    a href="#" id="hide"Cкрыть
+
+br
+table border="2" width="50%" cellpadding="5" align="center"
+  -i=0
+  tr
+    td align="center" bgcolor="red" class="red" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'red'); $('#vopr').html('<h3>Вопрос для '+fio1[i+1]+'</h3><br><h2>'+vopr1[i=i+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="blue" class="blue" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'blue'); $('#vopr').html('<h3>Вопрос для '+fio2[j+1]+'</h3><br><h2>'+vopr2[j=j+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="yellow" class="yellow" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'yellow'); $('#vopr').html('<h3>Вопрос для '+fio3[k+1]+'</h3><br><h2>'+vopr3[k=k+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="blue" class="blue" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'blue'); $('#vopr').html('<h3>Вопрос для '+fio2[j+1]+'</h3><br><h2>'+vopr2[j=j+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="yellow" class="yellow" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'yellow'); $('#vopr').html('<h3>Вопрос для '+fio3[k+1]+'</h3><br><h2>'+vopr3[k=k+1]+'</h2>');"
+      #{i=i.next}
+  tr
+    td align="center" bgcolor="blue" class="blue" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'blue'); $('#vopr').html('<h3>Вопрос для '+fio2[j+1]+'</h3><br><h2>'+vopr2[j=j+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="yellow" class="yellow" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'yellow'); $('#vopr').html('<h3>Вопрос для '+fio3[k+1]+'</h3><br><h2>'+vopr3[k=k+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="red" class="red" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'red'); $('#vopr').html('<h3>Вопрос для '+fio1[i+1]+'</h3><br><h2>'+vopr1[i=i+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="white" class="white" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'white'); $('#vopr').html('<h3>Общий вопрос</h3><br><h2>Как называется сооружение (замкнутое кольцо радиусом 100м), построенное около Женевы 5 лет назад?</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="red" class="red" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'red'); $('#vopr').html('<h3>Вопрос для '+fio1[i+1]+'</h3><br><h2>'+vopr1[i=i+1]+'</h2>');"
+      #{i=i.next}
+  tr
+    td align="center" bgcolor="yellow" class="yellow" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'yellow'); $('#vopr').html('<h3>Вопрос для '+fio3[k+1]+'</h3><br><h2>'+vopr3[k=k+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="red" class="red" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'red'); $('#vopr').html('<h3>Вопрос для '+fio1[i+1]+'</h3><br><h2>'+vopr1[i=i+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="white" class="white" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'white'); $('#vopr').html('<h3>Общий вопрос</h3><br><h2>В честь этого  химического элемента, используемого в изготовлении всей современной электроники, названа долина в США? Назовите его.</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="yellow" class="yellow" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'yellow'); $('#vopr').html('<h3>Вопрос для '+fio3[k+1]+'</h3><br><h2>'+vopr3[k=k+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="blue" class="blue" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'blue'); $('#vopr').html('<h3>Вопрос для '+fio2[j+1]+'</h3><br><h2>'+vopr2[j=j+1]+'</h2>');"
+      #{i=i.next}
+  tr
+    td align="center" bgcolor="blue" class="blue" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'blue'); $('#vopr').html('<h3>Вопрос для '+fio2[j+1]+'</h3><br><h2>'+vopr2[j=j+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="red" class="red" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'red'); $('#vopr').html('<h3>Вопрос для '+fio1[i+1]+'</h3><br><h2>'+vopr1[i=i+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="yellow" class="yellow" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'yellow'); $('#vopr').html('<h3>Вопрос для '+fio3[k+1]+'</h3><br><h2>'+vopr3[k=k+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="white" class="white" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'white'); $('#vopr').html('<h3>Общий вопрос</h3><br><h2>Назовите наименьшую десятичную приставку, которая указывает на уровень достижений в современных технологиях?</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="red" class="red" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'red'); $('#vopr').html('<h3>Вопрос для '+fio1[i+1]+'</h3><br><h2>'+vopr1[i=i+1]+'</h2>');"
+      #{i=i.next}
+  tr
+    td align="center" bgcolor="white" class="white" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'white'); $('#vopr').html('<h3>Общий вопрос</h3><br><h2>Как называлась космическая станция, затопленная в 1995 году?</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="blue" class="blue" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'blue'); $('#vopr').html('<h3>Вопрос для '+fio2[j+1]+'</h3><br><h2>'+vopr2[j=j+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="yellow" class="yellow" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'yellow'); $('#vopr').html('<h3>Вопрос для '+fio3[k+1]+'</h3><br><h2>'+vopr3[k=k+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="blue" class="blue" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'blue'); $('#vopr').html('<h3>Вопрос для '+fio2[j+1]+'</h3><br><h2>'+vopr2[j=j+1]+'</h2>');"
+      #{i=i.next}
+    td align="center" bgcolor="red" class="red" id="#{i.next}" onclick="$('##{i.next}').css('background-color', 'red'); $('#vopr').html('<h3>Вопрос для '+fio1[i+1]+'</h3><br><h2>'+vopr1[i=i+1]+'</h2>');"
+      #{i=i.next}
+br
+br
+
+div id="vopr" align="center"
+div id="timer" align="center"
+
+
+javascript:
+  $(".blue").click(function() {
+        $("#timer").stopTime();
+        $("#timer").everyTime(1000, function(i) {
+          $(this).html("<h2>"+i+"</h2>");
+          if (i==20) $("#timer").stopTime();
+        });
+      });
+  $(".yellow").click(function() {
+        $("#timer").stopTime();
+        $("#timer").everyTime(1000, function(i) {
+          $(this).html("<h2>"+i+"</h2>");
+          if (i==20) $("#timer").stopTime();
+        });
+      });
+  $(".red").click(function() {
+        $("#timer").stopTime();
+        $("#timer").everyTime(1000, function(i) {
+          $(this).html("<h2>"+i+"</h2>");
+          if (i==20) $("#timer").stopTime();
+        });
+      });
+  $(".white").click(function() {
+        $("#timer").stopTime();
+        $("#timer").everyTime(1000, function(i) {
+          $(this).html("<h2>"+i+"</h2>");
+          if (i==20) $("#timer").stopTime();
+        });
+      });
+  $(".blue").css('background-color', 'grey');
+      $(".yellow").css('background-color', 'grey');
+      $(".red").css('background-color', 'grey');
+      $(".white").css('background-color', 'grey');
+
+  $("#hide").click (function (){
+    $(".blue").css('background-color', 'grey');
+    $(".yellow").css('background-color', 'grey');
+    $(".red").css('background-color', 'grey');
+    $(".white").css('background-color', 'grey');
+  });
+  $("#show").click (function (){
+    $(".blue").css('background-color', 'blue');
+    $(".yellow").css('background-color', 'yellow');
+    $(".red").css('background-color', 'red');
+    $(".white").css('background-color', 'white');
+  });    

@@ -1,0 +1,35 @@
+h1 Listing voprosies
+
+= link_to 'New Voprosy', new_voprosy_path
+
+table
+  tr
+    th Vopr
+    th Tur
+    th Id uchast
+    th Categor
+    th Ответ №1
+    th Ответ №2
+    th Ответ №3
+    th Ответ №4
+    th 
+    th
+    th
+
+  - @voprosies.each do |voprosy|
+    tr
+      td= voprosy.vopr
+      td= voprosy.tur
+      td= voprosy.id_uchast
+      td= voprosy.categor
+      td= voprosy.otvet1
+      td= voprosy.otvet2
+      td= voprosy.otvet3
+      td= voprosy.otvet4
+      td= link_to 'Show', voprosy
+      td= link_to 'Edit', edit_voprosy_path(voprosy)
+      td= link_to 'Destroy', voprosy, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+

@@ -1,0 +1,89 @@
+-i=0
+javascript:
+  var vopr=[], otvet1=[], otvet2=[], otvet3=[], otvet4=[];
+- @vopros.each do |voprosy|
+    javascript:
+      vopr[#{i=i.next}]= "#{voprosy.vopr}";
+      otvet1[#{i}]= "#{voprosy.otvet1}";
+      otvet2[#{i}]= "#{voprosy.otvet2}";
+      otvet3[#{i}]= "#{voprosy.otvet3}";
+      otvet4[#{i}]= "#{voprosy.otvet4}"; 
+div id="vopr" style="visibility:visible;"
+
+
+h2 id="num" align="center" style='color: red'
+h2 id="vopros" align="center"
+br
+table align="center"
+  tr
+    td 
+      h3 id="a" style="visibility: hidden" a)&nbsp;&nbsp;&nbsp;
+    td 
+      h3 id="otvet1" style='color: blue'
+  tr  
+    td 
+      h3 id="b" style="visibility: hidden" b)&nbsp;&nbsp;&nbsp;
+    td 
+      h3 id="otvet2" style='color: blue'
+  tr   
+    td 
+      h3 id="c" style="visibility: hidden" c)&nbsp;&nbsp;&nbsp;
+    td 
+      h3 id="otvet3" style='color: blue'    
+  tr
+    td 
+      h3 id="d" style="visibility: hidden" d)&nbsp;&nbsp;&nbsp;
+    td 
+      h3 id="otvet4" style='color: blue'
+br
+br
+br
+br
+div id="timer" align="center"
+div id="timer1"  style="visibility: hidden" Дополнительный вопрос
+javascript:
+        var j=1;
+        $("#timer").everyTime(1000, function(i) {
+          if (i%9==0)
+          {
+            $("#num").html('Вопрос №'+j);
+            $("#vopros").html(''+vopr[j]);
+            $("#otvet1").html(''+otvet1[j]);
+            $("#otvet2").html(''+otvet2[j]);
+            $("#otvet3").html(''+otvet3[j]);
+            $("#otvet4").html(''+otvet4[j]);
+            j++;
+          }
+          if (j==2)
+          {
+            $("#a").css('visibility', 'visible');
+            $("#b").css('visibility', 'visible');
+            $("#c").css('visibility', 'visible');
+            $("#d").css('visibility', 'visible');
+          }
+          $(this).html("<h1>"+(-i+9*j)+"</h1>");
+          if (i==152) 
+          {
+            $("#timer").stopTime();
+            $("#timer1").css('visibility', 'visible');
+          }  
+        });
+        $("#timer1").click(function() {
+          $("#timer").everyTime(1000, function(i) {
+            if (i%9==0)
+            {
+              $("#num").html('Вопрос №'+j);
+              $("#vopros").html(''+vopr[j]);
+              $("#otvet1").html(''+otvet1[j]);
+              $("#otvet2").html(''+otvet2[j]);
+              $("#otvet3").html(''+otvet3[j]);
+              $("#otvet4").html(''+otvet4[j]);
+              j++;
+            }
+            $(this).html("<h1>"+i+"</h1>");
+            if (i==18) $("#timer").stopTime();
+          });
+        });
+              
+         
+      

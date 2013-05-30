@@ -1,0 +1,10 @@
+table border="2" width="100%" cellpadding="5"
+  -i=1
+  - @categor.each do |categ|
+      - if i%10==0
+          td
+            h2 =link_to categ.categor, main_tur2vop_path(categ.categor)
+      - if i%40==0
+          tr
+
+      - i=i.next            

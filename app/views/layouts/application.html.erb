@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Самый умный</title>
+    <%= stylesheet_link_tag    "application", "bootstrap.css", "bootstrap.min.css" %>
+    <%= javascript_include_tag "application", "jquery.timers.js" %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Самый умный</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li <% if params[:action]=='index' %> class="active"<% end %>><%= link_to 'Главная', main_index_path %></li>            
+              <li<% if params[:action]=='tur1' %> class="active"<% end %>><%= link_to '1-й тур', main_tur1_path %></li>
+              <li<% if params[:action]=='tur2' %> class="active"<% end %>><%= link_to '2-й тур', main_tur2_path %></li>
+              <li<% if params[:action]=='tur3' %> class="active"<% end %>><%= link_to '3-й тур', main_tur3_path %></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="hero-unit">	
+        <%= yield %>
+      </div>
+      <hr>
+
+      <footer>
+        <p align="center">&copy; МОУ "Мочалищенская СОШ" 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+  </body>
+</html>

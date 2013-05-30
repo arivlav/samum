@@ -1,0 +1,53 @@
+-i=0
+javascript:
+  var vopr=[];
+- @vopros.each do |voprosy|
+    -i=i.next
+    javascript:  
+      vopr[#{i}]= "#{voprosy.vopr}";
+      
+div id="vopr" style="visibility:visible;"
+br
+h2 align="center" style='color: blue' #{params[:format]}
+br
+h2 id="num" align="center" style='color: red'
+h2 id="vopros" align="center"
+br
+br
+br
+br
+br
+div id="timer" align="center"
+br
+br
+br
+br
+table width="100%"
+  tr
+    td align="left" 
+      h2
+        a href="#" id="start" Старт
+    td align="center"
+      h2
+        a href="#" id="stop" Стоп
+    td align="right"
+      h2
+        a href="#" id="next" Следующий->
+javascript:
+      var j=1; 
+      $("#start").click(function() {
+        $("#timer").everyTime(1000, function(i) {
+          $(this).html("<h2>"+i+"</h2>");
+          $("#num").html('Вопрос №'+j);
+          $("#vopros").html(''+vopr[j]);
+        });
+      });  
+      $("#stop").click(function() {
+        $("#timer").stopTime();
+      });
+       
+      $("#next").click(function() {
+        j++;
+        $("#num").html('Вопрос №'+j);
+        $("#vopros").html(''+vopr[j]);
+      });  

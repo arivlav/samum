@@ -1,0 +1,30 @@
+p#notice = notice
+
+p
+  b Вопрос:
+  = @voprosy.vopr
+p
+  b Тур:
+  = @voprosy.tur
+p
+  b Id участика:
+  = @voprosy.id_uchast
+p
+  b Категория:
+  = @voprosy.categor
+p
+  b Ответ №1:
+  = @voprosy.otvet1
+p
+  b Ответ №2:
+  = @voprosy.otvet2
+p
+  b Ответ №3:
+  = @voprosy.otvet3
+p
+  b Ответ №4:
+  = @voprosy.otvet4
+
+= link_to 'Редактировать', edit_voprosy_path(@voprosy)
+'|
+= link_to 'Назад', voprosies_path
